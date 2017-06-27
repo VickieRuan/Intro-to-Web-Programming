@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>Sign Up</title>
+   <link rel="stylesheet" href="css/assign5.css" />
+   <script src="js/assign5.js"></script>
+</head>
+<body>
+   
+    <form name ="signup" action="https://httpbin.org/post" method="post" onsubmit="return formValidation();">
+         <h1> JobSearch<span style="font-size: 12px">.com</span></h1>
+         <h2>Create Your Account</h2>
+         <span style="color:red">* Required information</span><br>
+         <div class="basicInfo"> <h3>Basic Information</h3>
+             <p> Email <span style="color:red">*</span> <input type="email" name="email" required autofucus> </p>
+             <p> Passowrd <span style="color:red">*</span> <input type="password" name="password" id='pw' onchange="validatePW()" required> <p id="pwMsg"> </p> </p>
+             <p> Retype Password <span style="color:red">*</span> <input type="password" onchange="validateRePW()" name="retypePW" id="rePw" required><p id="rePwMsg"> </p> </p>
+             <p> First Name <span style="color:red">*</span> <input type="text" name="firstName" id="fname" onchange="validateFname() " required><p id="fnameMsg" > </p> </p>
+             <p> Last Name <span style="color:red">*</span> <input type="text" name="lastName" id="lname" onchange="validateLname()" required><p id="lnameMsg"> </p> </p>
+             <p> Phone Number <span style="color:red">*</span> <input type="tel" name="phoneNumber" placeholder="999-999-9999" onchange="validatePhone()" id="phone" required><p id="phoneMsg"></p> </p>
+             <p> Address <span style="color:red">*</span> <input type="text" name="address" required></p>
+             <p> City <span style="color:red">*</span> <input type="text" name="city" required></p>
+             <p> Province <span style="color:red">*</span> 
+               <select name="province" id="province" required>
+                 <optgroup label="Province">
+                     <option value="AB"> Alberta </option>
+                     <option value="BC"> British Columbia </option>
+                     <option value="MB"> Manitoa </option>
+                     <option value="NB"> New Brunswick </option>
+                     <option value="NL"> Newfoundland </option>
+                     <option value="NS"> Nova Scotia </option>
+                     <option value="ON"> Ontario </option>
+                     <option value="PE"> Prince Edward Island </option>
+                     <option value="QC"> Quebec </option>
+                     <option value="SK"> Saskatchewan </option>
+                 </optgroup>
+                 <optgroup label="Territories">
+                     <option value="NT"> Northwest Territories </option>
+                     <option value="YT"> Yukon </option>
+                     <option value="NU"> Nunavut </option>
+                </optgroup>
+               </select>
+             </p>
+             <p> Country <span style="color:red">*</span> <input type="text" list="ct" name="country" required/> 
+                 <datalist id="ct">
+                     <option value="Canada"> Canada </option>
+                     <option value="United States"> United States </option>
+                     <option value="China"> China </option>
+                     <option value="France"> France </option>
+                     <option value="Mexico"> Mexico </option>
+                   
+                 </datalist>
+             </p>
+
+         </div>
+         <div class="education"> <h3>Education</h3>
+             <p> School <span style="color:red">*</span> <input type="text" required></p>
+             <p> Program <span style="color:red">*</span> <input type="text" required></p>
+             <p> Education Level <span style="color:red">*</span> 
+                 <select name="educationLevel" id="eduLevel" required>
+                     <option value="0"> - select - </option>
+                     <option value="technicalDiploma">  Technical Diploma </option>
+                     <option value="collegeDiploma"> College Diploma </option>
+                     <option value="bachelorDegree"> Bachelor's Degree </option>
+                     <option value="masterDegree"> Master's Degree </option>
+                     <option value="Others">Others</option>
+                 </select>
+             </p>
+             <fieldset id = "eduStatus">
+                 <legend>Education Status</legend>
+                   <ul class="eduStatusList">
+                     <li><input type="radio" name="educationStatus" value="graduated">Graduated </li>
+                     <li><input type="radio" name="educationStatus" value="currentEnrolled">Current enrolled</li>
+                     <li><input type="radio" name="educationStatus" value="didNotGraduate">Did not graduate</li>
+                   </ul>
+                   <p id="eduError"></p>
+
+             </fieldset> 
+             <p> Graduation Date <input type="text" required> </p> 
+
+        
+         </div>
+
+         <div class="workExperience"> <h3>Work Experience</h3>
+             <p> Employer: <input type="text" optional></p>
+             <p> Job Title: <input type="text" optional></p>
+             <p> Job Duty: </p>
+                 <textarea name="jobDuty" cols=40 rows=4 optional></textarea>
+             <p> Worked Year <input type="number" min="1" max="20" optional></p>
+         </div>
+
+         <div class="attachments"> <h3>Attachments</h3>
+             <p> Attachments <input type="file" name="attachment" optional multiple></p>
+         </div>
+         <div class="submit">
+              <input type="reset" value="Reset">
+              <input type="submit" value="Apply">
+         </div>
+ 
+    </form>
+</body>
+</html>
