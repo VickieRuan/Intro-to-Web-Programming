@@ -1,0 +1,62 @@
+
+/* Place all of your CSS Code in this file */
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: ___Jing Lin Ruan_____ Student ID: 129173167___ Date: March 25. 2017_ 
+* 
+********************************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+body {
+	color: IndianRed;
+}
+
+nav, footer {
+	background-color: IndianRed; 
+	border-color: white; 
+}
+
+header {
+	text-shadow: 5px 5px 5px pink;
+	font-size: 140%;
+}
+
+h1.app-title{
+	font-family: 'Baloo Bhaina', cursive;
+	text-align: center;
+	margin: 2px;
+}
+
+div.main-table-container{
+	max-height: 400px;
+	overflow: scroll;
+	padding: 5px 10px;
+
+}
+
+table.main-table-top th{
+	color: IndianRed;
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding: 5px 10px;
+
+}
+
+table.main-table td{
+	padding: 5px 5px;
+	background-color: IndianRed;
+	color: white;
+	border: solid 1px silver;
+}
+table.main-table p span{
+	font-style: italic;
+	font-weight: bold;
+}
