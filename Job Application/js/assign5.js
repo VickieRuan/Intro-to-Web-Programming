@@ -29,7 +29,7 @@ function validatePhone(){
 }
   
 
-
+/*validate passwork and display promt messages*/
 function validatePW(){
 
 
